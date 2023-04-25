@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,42 +24,40 @@ export const Navbar = () => {
 
   const bgColor = isScrolled ? "bg-gray-800" : "bg-transparent";
 
+  const NavLink = ({ href, children }) => {
+    const router = useRouter();
+    const isActive = router.asPath === href;
+
+    return (
+      <li>
+        <a
+          className={`text-xl ${
+            isActive ? "font-extrabold text-red-500" : "font-normal"
+          } hover:text-red-500 transition-colors duration-300`}
+          href={href}
+        >
+          {children}
+        </a>
+      </li>
+    );
+  };
+
   return (
-    <nav className={`${bgColor} sticky top-0`}>
+    <nav className={`${bgColor} sticky top-0 z-50`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <a href="/" className="text-white font-bold">
+            <a href="/" className="font-bold md:text-4xl text-2xl text-red-500">
               My Website
             </a>
           </div>
           <div className="hidden md:block">
             <ul className="flex items-end justify-center gap-5">
-              <li>
-                <a href="/" className="text-white font-bold">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="text-white font-bold">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/crowd-funding" className="text-white font-bold">
-                  CrowdFunds
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-white font-bold">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="/feedback" className="text-white font-bold">
-                  Feedback
-                </a>
-              </li>
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/about">About</NavLink>
+              <NavLink href="/crowd-funding">CrowdFunds</NavLink>
+              <NavLink href="/contact">Contact</NavLink>
+              <NavLink href="/feedback">Feedback</NavLink>
             </ul>
           </div>
           <div className="md:hidden">
@@ -107,46 +106,21 @@ export const Navbar = () => {
       >
         {isOpen ? (
           <ul className="flex flex-col items-center justify-center gap-5 bg-gray-900">
-            <li>
-              <a
-                href="/"
-                className="block text-white font-bold py-2 px-4 hover:bg-gray-700"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="/about"
-                className="block text-white font-bold py-2 px-4 hover:bg-gray-700"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="/crowd-funding"
-                className="block text-white font-bold py-2 px-4 hover:bg-gray-700"
-              >
-                CrowdFunds
-              </a>
-            </li>
-            <li>
-              <a
-                href="/contact"
-                className="block text-white font-bold py-2 px-4 hover:bg-gray-700"
-              >
-                Contact
-              </a>
-            </li>
-            <li>
-              <a
-                href="/feedback"
-                className="block text-white font-bold py-2 px-4 hover:bg-gray-700"
-              >
-                Feedback
-              </a>
-            </li>
+            <span className="pt-4">
+              <NavLink href="/">Home</NavLink>
+            </span>
+            <span className="pt-2">
+              <NavLink href="/about">About</NavLink>
+            </span>
+            <span className="pt-2">
+              <NavLink href="/crowd-funding">CrowdFunds</NavLink>
+            </span>
+            <span className="pt-2">
+              <NavLink href="/contact">Contact</NavLink>
+            </span>
+            <span className="pt-2 py-4">
+              <NavLink href="/feedback">Feedback</NavLink>
+            </span>
           </ul>
         ) : (
           ""
