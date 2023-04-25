@@ -12,13 +12,13 @@ export const Navbar = () => {
           <a href="/about">About</a>
         </li>
         <li>
-          <a href="/CrowdFunds">CrowdFunds</a>
+          <a href="/crowd-funding">CrowdFunds</a>
         </li>
         <li>
-          <a href="/Contact">Contact</a>
+          <a href="/contact">Contact</a>
         </li>
         <li>
-          <a href="/Feedback">Feedback</a>
+          <a href="/feedback">Feedback</a>
         </li>
       </ul>
     </nav>
