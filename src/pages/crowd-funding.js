@@ -1,7 +1,8 @@
+import { Layout } from "@/components";
 import React from "react";
 
 export const CroudFunding = () => {
-  return <div>croud-funding</div>;
+  return <Layout>CroudFunding</Layout>;
 };
 
 export default CroudFunding;
