@@ -2,6 +2,15 @@ import React from 'react'
 
 export const About = () => {
   return (
-    <div className='text-red-200'>About</div>
+    <div>
+          <section>
+                <div className='lef-sec '>
+                  left
+                </div>
+                <div>
+                  right
+                </div>
+          </section>
+    </div>
   )
 }
