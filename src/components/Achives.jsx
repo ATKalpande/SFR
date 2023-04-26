@@ -35,7 +35,7 @@ export const Achives = () => {
           <div class="max-w-sm rounded overflow-hidden shadow-lg">
             <img
               class="w-full"
-              src="https://picsum.photos/60/50/?blur=2"
+              src="https://picsum.photos/60/50"
               alt="Sunset in the mountains"
             />
             <div class="px-6 py-4">

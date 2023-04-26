@@ -5,3 +5,4 @@ export { About } from "./About";
 export { Achives } from "./Achives";
 export { Suppo } from "./Suppo";
 export { Layout } from "./Layout";
+export { Contact } from "./Contact";

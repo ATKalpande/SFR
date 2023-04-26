@@ -8,6 +8,7 @@ import {
   Suppo,
   Navbar,
   Layout,
+
 } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,7 +18,11 @@ export default function Home() {
     <main className="min-h-screen py-5">
       <Layout>
         <Intro />
+        <Achives />
+        <Suppo />
+        
       </Layout>
+
     </main>
   );
 }
