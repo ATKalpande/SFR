@@ -56,8 +56,9 @@ export const Navbar = () => {
               <NavLink href="/">Home</NavLink>
               <NavLink href="/about">About</NavLink>
               <NavLink href="/crowd-funding">CrowdFunds</NavLink>
+              <NavLink href="/sponsors">sponsors</NavLink>
+             <NavLink href ="/gallery">Gallery</NavLink>
               <NavLink href="/contact">Contact</NavLink>
-              <NavLink href="/feedback">Feedback</NavLink>
             </ul>
           </div>
           <div className="md:hidden">
@@ -115,11 +116,18 @@ export const Navbar = () => {
             <span className="pt-2">
               <NavLink href="/crowd-funding">CrowdFunds</NavLink>
             </span>
+
+            <span className="pt-2">
+              <NavLink href="/gallery">Gallery</NavLink>
+            </span>
+
+            <span className="pt-2">
+              <NavLink href="/sponsors">Sponsors</NavLink>
+            </span>
+            
+         
             <span className="pt-2">
               <NavLink href="/contact">Contact</NavLink>
-            </span>
-            <span className="pt-2 py-4">
-              <NavLink href="/feedback">Feedback</NavLink>
             </span>
           </ul>
         ) : (

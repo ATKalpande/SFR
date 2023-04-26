@@ -8,6 +8,8 @@ import {
   Suppo,
   Navbar,
   Layout,
+  sponsors,
+  gallery,
 
 } from "@/components";
 
@@ -19,7 +21,6 @@ export default function Home() {
       <Layout>
         <Intro />
         <Achives />
-        <Suppo />
         
       </Layout>
 
