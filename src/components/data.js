@@ -1,47 +1,47 @@
 const carouselImages = [
   {
     id: 1,
-    image: "img/7.jpeg",
+    image: "./slider-images/1.jpeg",
     text: "WELL BEGAN IS HALF DONE",
   },
   {
     id: 2,
-    image: "img/1.jpeg",
+    image: "./slider-images/2.jpeg",
     text: "",
   },
   {
     id: 3,
-    image: "img/6.jpeg",
+    image: "./slider-images/3.jpeg",
     text: "",
   },
   {
     id: 4,
-    image: "img/5.jpeg",
+    image: "./slider-images/4.jpeg",
     text: "",
   },
   {
     id: 5,
-    image: "img/4.jpeg",
+    image: "./slider-images/5.jpeg",
     text: "",
   },
   {
     id: 6,
-    image: "img/8.jpeg",
+    image: "./slider-images/6.jpeg",
     text: "",
   },
   {
     id: 7,
-    image: "img/img1.jpeg",
+    image: "./slider-images/7.jpeg",
     text: "",
   },
   {
     id: 8,
-    image: "img/3.jpeg",
+    image: "./slider-images/8.jpeg",
     text: "",
   },
   {
     id: 9,
-    image: "img/2.jpeg",
+    image: "./slider-images/img1.jpeg",
     text: "THE TEAM",
   },
 ];

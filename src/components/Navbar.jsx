@@ -49,7 +49,6 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div
-            className="flex items-center"
             initial={{
               opacity: 0,
               x: -500,
@@ -61,10 +60,13 @@ export const Navbar = () => {
               scale: 1,
             }}
             transition={{ duration: 1.3 }}
+            className="flex items-center"
           >
             <Link
               href="/"
-              className="font-bold md:text-4xl text-2xl text-red-500"
+              className={`font-bold md:text-4xl text-2xl text-gray-600 ${
+                isScrolled ? "text-gray-200" : "text-gray-600"
+              }`}
             >
               My Website
             </Link>
@@ -145,7 +147,7 @@ export const Navbar = () => {
               <NavLink href="/about">About</NavLink>
             </span> */}
             <span className="pt-2">
-              <NavLink href="/crowd-funding">Crowdfunding</NavLink>
+              <NavLink href="/crowd-funding">CrowdFunds</NavLink>
             </span>
 
             <span className="pt-2">

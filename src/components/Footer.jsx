@@ -31,7 +31,6 @@ export const Footer = () => {
           );
         })}
       </div>
-
       <p className="text-center text-gray-300 py-1">
         &copy; 2023 - All rights reserved
       </p>
