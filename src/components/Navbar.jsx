@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,14 +31,14 @@ export const Navbar = () => {
 
     return (
       <li>
-        <a
+        <Link
           className={`text-xl ${
             isActive ? "font-extrabold text-red-500" : "font-normal"
           } hover:text-red-500 transition-colors duration-300`}
           href={href}
         >
           {children}
-        </a>
+        </Link>
       </li>
     );
   };
@@ -47,9 +48,9 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <a href="/" className="font-bold md:text-4xl text-2xl text-red-500">
+            <Link href="/" className="font-bold md:text-4xl text-2xl text-red-500">
               My Website
-            </a>
+            </Link>
           </div>
           <div className="hidden md:block">
             <ul className="flex items-end justify-center gap-5">

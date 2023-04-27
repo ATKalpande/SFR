@@ -51,12 +51,12 @@ const breakPoints =
 
 
 
-export const Slider = () => {
+export const Slider = (key) => {
   return (
     <>
 
    
-    <Carousel className="" enableAutoPlay autoPlaySpeed={1500}    breakPoints={breakPoints}>
+    <Carousel className="" enableAutoPlay autoPlaySpeed={2000}    breakPoints={breakPoints}>
       {ddata.map((d)=>{
         return(
           <div  className="">

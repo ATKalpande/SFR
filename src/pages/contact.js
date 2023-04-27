@@ -21,8 +21,9 @@ const Contact = () => {
             <p>Maharashtra India</p>
              
           </p>
-          <h3 className="text-bold mt-5 ">Email</h3>
-          <p>Contact :  <a href="mailto: srh@gmail.com"> srh@gmail.com</a> </p>
+          <h3 className="text-bold mt-5 ">Contact Us</h3>
+          <p>Email :  <a href="mailto: sahyadriformularacers@gmail.com"> sahyadriformularacers@gmail.com</a> </p>
+          <p>Phone No :  <a href="#"> +91 8329332765</a> </p>
          
         </div>
         <div  className=" mr-9 w-2/3 ">
