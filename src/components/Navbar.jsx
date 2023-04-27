@@ -80,8 +80,7 @@ export const Navbar = () => {
 =======
               <NavLink href="/crowd-funding">CrowdFunds</NavLink>
               <NavLink href="/sponsors">sponsors</NavLink>
-              <NavLink href="/gallery">Gallery</NavLink>
->>>>>>> 689191a1b322c7ad2d4a0b3cf58afd797252a9b1
+             <NavLink href ="/gallery">Gallery</NavLink>
               <NavLink href="/contact">Contact</NavLink>
             </motion.ul>
           </div>

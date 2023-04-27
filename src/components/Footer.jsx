@@ -17,6 +17,7 @@ const socials = [
 export const Footer = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <footer className=" w-full  text-center align-center  bottom-0">
       <div className="flex  ">
           <div className="mx-4">
@@ -51,6 +52,23 @@ export const Footer = () => {
           );
         })}
       </div>
+=======
+    <footer className=" w-full text-center bottom-0">
+      <div className="flex items-center justify-center gap-5 my-2">
+        {socials.map((social) => {
+          return (
+            <SocialIcon
+              key={social.name}
+              url={social.url}
+              className="mx-1 grayscale hover:grayscale-0 transition ease-in duration-300"
+              target="_blank"
+              fgColor="#fff"
+              style={{ height: 35, width: 35 }}
+            />
+          );
+        })}
+      </div>
+>>>>>>> 689191a1b322c7ad2d4a0b3cf58afd797252a9b1
       <p className="text-center text-gray-300 py-1">
 >>>>>>> 689191a1b322c7ad2d4a0b3cf58afd797252a9b1
         &copy; 2023 - All rights reserved
