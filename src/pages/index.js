@@ -19,12 +19,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="min-h-screen py-5">
+    <main className="min-h-screen py-5 font-primary">
       <Layout>
         <Intro />
-
-        <About />
-
+        {/* <About /> */}
         <Achives />
       </Layout>
     </main>
