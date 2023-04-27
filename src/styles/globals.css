@@ -7,7 +7,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  font-family: "Manrope", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,7 +16,65 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+p {
+  line-height: 3ch !important;
+}
 
+/* Color the cursor with red ball showing the shadow */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--background-start-rgb));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--background-end-rgb));
+  border-radius: 1em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--background-end-rgb));
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgb(var(--background-end-rgb));
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgb(var(--background-end-rgb));
+}
+
+::-webkit-scrollbar-corner {
+  background: rgb(var(--background-end-rgb));
+}
+.cursor {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  border-radius: 50%;
+  background-color: red;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.tail {
+  width: 200px;
+  height: 20px;
+  position: fixed;
+  top: -10px;
+  left: -180px;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.5);
+  transform-origin: left center;
+  transform: rotate(-45deg);
+  z-index: 9998;
+  pointer-events: none;
+}
+html,
 body {
   color: rgb(var(--foreground-rgb));
   font-family: "Manrope", sans-serif !important;

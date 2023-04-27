@@ -4,7 +4,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import {
   Footer,
-  Intro, 
+  Intro,
   Achives,
   About,
   Suppo,
@@ -13,25 +13,18 @@ import {
   sponsors,
   gallery,
   // Slider,
-
-
 } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="min-h-screen py-5">
+    <main className="min-h-screen py-5 font-primary">
       <Layout>
         <Intro />
-        
-        <About />
-        {/* <Slider /> */}
-
+        {/* <About /> */}
         <Achives />
-        
       </Layout>
-
     </main>
   );
 }
