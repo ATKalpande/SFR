@@ -51,7 +51,7 @@ const breakPoints =
 
 
 
-export const Slider = (key) => {
+export const Slider = () => {
   return (
     <>
 
