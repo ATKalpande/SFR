@@ -5,7 +5,7 @@ export const Achives = () => {
   return (
     <div>
       <div className="warapper flex flex-col  self-center  ">
-        <h2 className="  px-4 py-3 font-extrabold">Achivements</h2>
+        <h2 className="  px-4 py-3 underline decoration-red-500 font-extrabold">Achivements</h2>
         <div>
           <p className={styleCom}>
             secured All India Rank <span>14</span> in business presentation

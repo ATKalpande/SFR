@@ -52,7 +52,8 @@ export const Slider = () => {
                   alt={d.description}
                   className="aspect-[3/2] object-cover"
                 />
-                <h3 className="text-bold text-center mt-2">{d.text}</h3>
+                
+                <h3 className="text-bold text-center ">{d.text}</h3>
               </Link>
             </article>
           );
