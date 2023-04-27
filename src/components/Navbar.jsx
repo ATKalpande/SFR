@@ -33,12 +33,14 @@ export const Navbar = () => {
     return (
       <li>
         <Link
+        <Link
           className={`text-xl ${
             isActive ? "font-extrabold text-red-500" : "font-normal"
           } hover:text-red-500 transition-colors duration-300 md:px-5 uppercase font-bold`}
           href={href}
         >
           {children}
+        </Link>
         </Link>
       </li>
     );
@@ -48,27 +50,14 @@ export const Navbar = () => {
     <nav className={`${bgColor} sticky top-0 z-50 py-2 px-5`}>
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: -500,
-              scale: 0.5,
-            }}
-            animate={{
-              x: 0,
-              opacity: 1,
-              scale: 1,
-            }}
-            transition={{ duration: 1.3 }}
-            className="flex items-center"
-          >
+          <div className="flex items-center">
             <Link
               href="/"
-              className={`font-bold md:text-4xl text-2xl text-gray-600 ${
-                isScrolled ? "text-gray-200" : "text-gray-600"
-              }`}
+              className="font-bold md:text-4xl text-2xl text-red-500"
             >
               My Website
+            </Link>
+          </div>
             </Link>
           </motion.div>
           <div className="hidden md:block">
