@@ -54,7 +54,7 @@ export const Navbar = () => {
           <div className="hidden md:block">
             <ul className="flex items-end justify-center gap-5">
               <NavLink href="/">Home</NavLink>
-              <NavLink href="/about">About</NavLink>
+              {/* <NavLink href="/about">About</NavLink> */}
               <NavLink href="/crowd-funding">CrowdFunds</NavLink>
               <NavLink href="/sponsors">sponsors</NavLink>
              <NavLink href ="/gallery">Gallery</NavLink>
@@ -110,9 +110,9 @@ export const Navbar = () => {
             <span className="pt-4">
               <NavLink href="/">Home</NavLink>
             </span>
-            <span className="pt-2">
+            {/* <span className="pt-2">
               <NavLink href="/about">About</NavLink>
-            </span>
+            </span> */}
             <span className="pt-2">
               <NavLink href="/crowd-funding">CrowdFunds</NavLink>
             </span>
