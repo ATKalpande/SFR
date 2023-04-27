@@ -86,9 +86,14 @@ export const Navbar = () => {
             >
               <NavLink href="/">Home</NavLink>
               {/* <NavLink href="/about">About</NavLink> */}
+<<<<<<< HEAD
+              <NavLink href="/crowd-funding">Crowdfunding</NavLink>
+              <NavLink href="/sponsors">Sponsors</NavLink>
+             <NavLink href ="/gallery">Gallery</NavLink>
+=======
               <NavLink href="/crowd-funding">CrowdFunds</NavLink>
               <NavLink href="/sponsors">sponsors</NavLink>
-              <NavLink href="/gallery">Gallery</NavLink>
+             <NavLink href ="/gallery">Gallery</NavLink>
               <NavLink href="/contact">Contact</NavLink>
             </motion.ul>
           </div>
@@ -145,7 +150,7 @@ export const Navbar = () => {
               <NavLink href="/about">About</NavLink>
             </span> */}
             <span className="pt-2">
-              <NavLink href="/crowd-funding">CrowdFunds</NavLink>
+              <NavLink href="/crowd-funding">Crowdfunding</NavLink>
             </span>
 
             <span className="pt-2">
