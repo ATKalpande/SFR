@@ -33,14 +33,12 @@ export const Navbar = () => {
     return (
       <li>
         <Link
-        <Link
           className={`text-xl ${
             isActive ? "font-extrabold text-red-500" : "font-normal"
           } hover:text-red-500 transition-colors duration-300 md:px-5 uppercase font-bold`}
           href={href}
         >
           {children}
-        </Link>
         </Link>
       </li>
     );
@@ -58,8 +56,6 @@ export const Navbar = () => {
               My Website
             </Link>
           </div>
-            </Link>
-          </motion.div>
           <div className="hidden md:block">
             <motion.ul
               initial={{
