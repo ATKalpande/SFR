@@ -48,14 +48,27 @@ export const Navbar = () => {
     <nav className={`${bgColor} sticky top-0 z-50 py-2 px-5`}>
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
+          <motion.div
+            className="flex items-center"
+            initial={{
+              opacity: 0,
+              x: -500,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{ duration: 1.3 }}
+          >
             <Link
               href="/"
               className="font-bold md:text-4xl text-2xl text-red-500"
             >
               My Website
             </Link>
-          </div>
+          </motion.div>
           <div className="hidden md:block">
             <motion.ul
               initial={{
