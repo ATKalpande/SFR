@@ -1,15 +1,16 @@
 import { Layout } from "@/components";
 import React from "react";
 import { Achives } from "@/components";
+import { Hierarchy } from "@/components/hierarchy";
 
 export const CroudFunding = () => {
-  const tetxprop = `"text-gray-600 my-4 py-2 hover:text-gray-300 `
+ 
+  const tetxprop = `"text-gray-600 my-4 py-2 hover:text-gray-300 `;
   return (
     <Layout>
       <>
-      
         <section className="text-center text-xl block    mx-24 my-6">
-        <h1 className="text-2xl  underline  ">ABOUT US</h1>
+          <h1 className="text-2xl  underline  ">ABOUT US</h1>
           <p className={tetxprop}>
             TEAM SAHYADRI FORMULA RACERS India is the official Formula SAE team
             of Govt. College of Engineering & Research Avasari, Pune . The team
@@ -30,21 +31,32 @@ export const CroudFunding = () => {
             India.
           </p>
         </section>
-        
+
         <div className="flex justify-around">
-        <div className="ac ml-20 pl-12">
+          <div>
+            <h1 className="font-bold ml-5 text-3xl mb-4 underline decoration-pink-300">
+             How Can You  Support US
+            </h1>
+            <span>Hover / click</span>
+            < Hierarchy />
+          </div>
+
+
+         
+          {/* <div className="ac ml-20 pl-12">
               <Achives />
-        </div>
-        
-        <div className=" border rounded">
-              <img width="300px" src="/budjet.jpeg" />
-      </div>
-    
-        
+        </div> */}
+
+          <div >
+            <img className="rounded "  width="300px" src="/budjet.jpeg" />
+            <img className="rounded my-6" width="300px" src="/pie.jpeg" />
+          </div>
         </div>
 
-        
-         
+        <div className=" my-4 p-2 flex justify-center align-center">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScT5aPNvA76sjXfRyPY1FHZP1pOEdXJFTgoMyOwbh5XStmfsA/viewform?embedded=true" width="640" height="1658" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+
         
       </>
     </Layout>

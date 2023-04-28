@@ -59,8 +59,8 @@ export const Intro = () => {
         </div>
 
         <motion.div
-          className="xl:w-1/2 h-full md:ps-1 md:p-5 md:m-5 w-full p-5"
-          initial={{ x: 300, opacity: 0 }}
+          className="xl:w-1/2   w-full "
+          initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2 }}
         >

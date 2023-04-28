@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export const Navbar = () => {
@@ -23,7 +24,7 @@ export const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const bgColor = isScrolled ? "bg-gray-800" : "bg-transparent";
+  const bgColor = isScrolled ? "bg-gray-900" : "bg-transparent";
 
   const NavLink = ({ href, children }) => {
     const router = useRouter();
@@ -34,7 +35,7 @@ export const Navbar = () => {
         <Link
           className={`text-xl ${
             isActive ? "font-extrabold text-red-500" : "font-normal"
-          } hover:text-red-500 transition-colors duration-300`}
+          } hover:text-red-500 transition-colors duration-300 md:px-5 uppercase font-bold`}
           href={href}
         >
           {children}
@@ -44,8 +45,8 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className={`${bgColor} sticky top-0 z-50`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className={`${bgColor} sticky top-0 z-50 py-2 px-5`}>
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div
             initial={{
@@ -67,18 +68,31 @@ export const Navbar = () => {
                 isScrolled ? "text-gray-200" : "text-gray-600"
               }`}
             >
-              My Website
+              Team SFR
             </Link>
           </motion.div>
           <div className="hidden md:block">
-            <ul className="flex items-end justify-center gap-5">
+            <motion.ul
+              initial={{
+                opacity: 0,
+                x: 500,
+                scale: 0.5,
+              }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{ duration: 1.3 }}
+              className="flex items-end justify-center gap-5"
+            >
               <NavLink href="/">Home</NavLink>
               {/* <NavLink href="/about">About</NavLink> */}
-              <NavLink href="/crowd-funding">CrowdFunds</NavLink>
+              <NavLink href="/crowd-funding">Crowdfunding</NavLink>
               <NavLink href="/sponsors">sponsors</NavLink>
               <NavLink href="/gallery">Gallery</NavLink>
               <NavLink href="/contact">Contact</NavLink>
-            </ul>
+            </motion.ul>
           </div>
           <div className="md:hidden">
             <button
@@ -121,19 +135,19 @@ export const Navbar = () => {
       </div>
       <div
         className={`md:hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "h-60" : "h-0"
+          isOpen ? "h-[18rem]" : "h-0"
         }`}
       >
         {isOpen ? (
           <ul className="flex flex-col items-center justify-center gap-5 bg-gray-900">
-            <span className="pt-4">
+            <span className="pt-5">
               <NavLink href="/">Home</NavLink>
             </span>
             {/* <span className="pt-2">
               <NavLink href="/about">About</NavLink>
             </span> */}
             <span className="pt-2">
-              <NavLink href="/crowd-funding">CrowdFunds</NavLink>
+              <NavLink href="/crowd-funding">Crowdfunding</NavLink>
             </span>
 
             <span className="pt-2">
@@ -143,9 +157,8 @@ export const Navbar = () => {
             <span className="pt-2">
               <NavLink href="/sponsors">Sponsors</NavLink>
             </span>
-            
-         
-            <span className="pt-2">
+
+            <span className="pt-2 pb-5">
               <NavLink href="/contact">Contact</NavLink>
             </span>
           </ul>

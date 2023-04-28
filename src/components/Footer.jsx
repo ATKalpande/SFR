@@ -1,7 +1,19 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-
+import { SocialIcon } from "react-social-icons";
+const socials = [
+  {
+    name: "Instagram",
+    url: "https://instagram.com/sahyadriformularacers?igshid=YmMyMTA2M2Y=",
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/profile.php?id=100075801985622&mibextid=LQQJ4d",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/company/sahyadri-formula-racers/",
+  },
+];
 export const Footer = () => {
   return (
     <footer className=" w-full text-center bottom-0">
@@ -22,6 +34,7 @@ export const Footer = () => {
       <p className="text-center text-gray-300 py-1">
         &copy; 2023 - All rights reserved
       </p>
+      <p className="text-gray-500 pb-1">Build with ❤️ By RD and AK</p>
     </footer>
   );
 };

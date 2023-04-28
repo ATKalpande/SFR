@@ -116,61 +116,61 @@ export const gallery = () => {
 
       <div className={galleryImg}>
       <div className={mrgin}>
-                <img width={200} src="galleryPhoto/29.jpeg" alt="" />
+                <img className={hovimg} width={200} src="galleryPhoto/29.jpeg" alt="" />
                 </div>
               <div className={mrgin}>
-              <img width={200} src="galleryPhoto/30.jpeg" alt="" />
+              <img className={hovimg} width={200} src="galleryPhoto/30.jpeg" alt="" />
               </div>
              <div className={mrgin}>
-                <img width={200} src="galleryPhoto/31.jpeg" alt="" />
+                <img className={hovimg} width={200} src="galleryPhoto/31.jpeg" alt="" />
                 </div>
                 <div className={mrgin}>
-                <img width={200} src="galleryPhoto/32.jpeg" alt="" />
+                <img className={hovimg} width={200} src="galleryPhoto/32.jpeg" alt="" />
                 </div>
       </div>
 
       <div className={galleryImg}>
       <div className={mrgin}>
-                <img width={200} src="galleryPhoto/33.jpeg" alt="" />
+                <img className={hovimg} width={200} src="galleryPhoto/33.jpeg" alt="" />
                 </div>
               <div className={mrgin}>
-              <img width={200} src="galleryPhoto/34.jpeg" alt="" />
+              <img className={hovimg} width={200} src="galleryPhoto/34.jpeg" alt="" />
               </div>
              <div className={mrgin}>
-                <img width={200} src="galleryPhoto/35.jpeg" alt="" />
+                <img className={hovimg} width={200} src="galleryPhoto/35.jpeg" alt="" />
                 </div>
                 <div className={mrgin}>
-                <img width={200} src="galleryPhoto/36.jpeg" alt="" />
+                <img className={hovimg} width={200} src="galleryPhoto/36.jpeg" alt="" />
                 </div>
       </div>
 
       <div className={galleryImg}>
       <div className={mrgin}>
-                <img width={200} src="galleryPhoto/37.jpeg" alt="" />
+                <img className={hovimg} width={200} src="galleryPhoto/37.jpeg" alt="" />
                 </div>
               <div className={mrgin}>
-              <img width={200} src="galleryPhoto/38.jpeg" alt="" />
+              <img className={hovimg} width={200} src="galleryPhoto/38.jpeg" alt="" />
               </div>
              <div className={mrgin}>
-                <img width={200} src="galleryPhoto/39.jpeg" alt="" />
+                <img className={hovimg} width={200} src="galleryPhoto/39.jpeg" alt="" />
                 </div>
                 <div className={mrgin}>
-                <img width={200} src="galleryPhoto/40.jpeg" alt="" />
+                <img className={hovimg} width={200} src="galleryPhoto/40.jpeg" alt="" />
                 </div>
       </div>
 
       <div className={galleryImg}>
       <div className={mrgin}>
-                <img width={200} src="galleryPhoto/41.jpeg" alt="" />
+                <img className={hovimg} width={200} src="galleryPhoto/41.jpeg" alt="" />
                 </div>
               <div className={mrgin}>
-              <img width={200} src="galleryPhoto/42.jpeg" alt="" />
+              <img className={hovimg} width={200} src="galleryPhoto/42.jpeg" alt="" />
               </div>
              <div className={mrgin}>
-                <img width={200} src="galleryPhoto/44.jpeg" alt="" />
+                <img className={hovimg} width={200} src="galleryPhoto/44.jpeg" alt="" />
                 </div>
                 <div className={mrgin}>
-                <img width={200} src="galleryPhoto/8.jpeg" alt="" />
+                <img className={hovimg} width={200} src="galleryPhoto/8.jpeg" alt="" />
                 </div>
       </div>
 

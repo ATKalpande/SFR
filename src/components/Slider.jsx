@@ -38,7 +38,7 @@ export const Slider = () => {
   return (
     <>
       <Carousel
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center "
         enableAutoPlay
         autoPlaySpeed={1500}
         breakPoints={breakPoints}
@@ -53,7 +53,7 @@ export const Slider = () => {
                   className="aspect-[3/2] object-cover"
                 />
                 
-                <h3 className="text-bold text-center ">{d.text}</h3>
+                {/* <h3 className="text-bold text-center ">{d.text}</h3> */}
               </Link>
             </article>
           );
