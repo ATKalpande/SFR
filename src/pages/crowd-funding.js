@@ -10,7 +10,7 @@ export const CroudFunding = () => {
         initial={{ opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 1.3 }}
-        className="my-12 text-lg min-h-screen flex flex-col items-center"
+        className="my-36 text-lg min-h-screen flex flex-col items-center"
       >
         <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 uppercase text-center text-2xl text-red-500">
           ABOUT US
