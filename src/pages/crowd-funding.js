@@ -1,6 +1,5 @@
-import { Layout } from "@/components";
+import { Layout, Hierarchy } from "@/components";
 import React from "react";
-import { Hierarchy } from "@/components/hierarchy";
 import { motion } from "framer-motion";
 
 export const CroudFunding = () => {
