@@ -7,7 +7,7 @@ export const CroudFunding = () => {
     <Layout>
       <motion.section
         initial={{ opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 1.3 }}
         className="my-36 text-lg min-h-screen flex flex-col items-center"
       >

@@ -1,68 +1,121 @@
 import { Layout } from "@/components";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export const sponsors = (props) => {
-  const flexCom = `mt-10  mb-7 flex align-center justify-center justif-evenly ml-20 pr-14 gap-20`;
+  const flexCom = `md:my-8 flex md:flex-row flex-col justify-center text-lg items-center gap-1 md:gap-10 p-10 md:p-0`;
   const imgComp = `mr-5 `;
   return (
     <Layout>
-      <>
-        <div className=" flex flex-col ju justify-center text-xl ml-34 text-justify  h-full ">
-          <h2 className="font-bold text-lg text-center text-gray-200 ">
-            WHY SPONSOR US
-          </h2>
-          <div className="text-center p-4 ml-12 mr-12">
-            <h2 className="text-center mb-6 ">
-              SAHYADRI FORMULA RACERS has been progressing since its
-              establishment where students, year after year are determined to
-              put their skills, talent, experience and expertise in the projects
-              with very limited resources .
-            </h2>
-            <h2 className="text-center ">
-              We strive day and night to break all the barriers and continuously
-              think of new innovative methods to shape the automobile industry.
-              Participating in competitions like SAE SUPRA helps us to work
-              harder and dream bigger. We are also planning to participate in
-              the international FSAE events in upcoming years. Our team is built
-              with pure intension of knowledge upgradation. Any kind of
-              sponsorship given will be utilized in fully efficient manner. More
-              importantly team tree have roots of non-profit basis. Your
-              organisation can become a part of our memorable journey, and you
-              can share the pride of supporting and molding a team representing
-              the country on a global scale in future. We would be highly
-              obliged to have you as our sponsor, and we humbly extend the hand
-              of friendship and companionship.
-            </h2>
-          </div>
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="md:my-36 my-12 text-lg min-h-screen flex flex-col items-center"
+      >
+        <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 uppercase text-center text-2xl text-red-500 mb-16">
+          WHY SPONSOR US
+        </h2>
+        <div className="text-gray-400 md:max-w-[60%]">
+          <motion.p
+            initial={{
+              opacity: 0,
+              x: -500,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{ duration: 1 }}
+            className=" my-4 py-2 mx-auto text-xl px-5 md:text-center text-justify"
+          >
+            <strong className="font-extrabold text-gray-50 uppercase">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEAM SAHYADRI FORMULA RACERS
+              India&nbsp;
+            </strong>
+            has been progressing since its establishment where students, year
+            after year are determined to put their skills, talent, experience
+            and expertise in the projects with very limited resources .
+          </motion.p>
+          <motion.p
+            initial={{
+              opacity: 0,
+              x: 500,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{ duration: 1 }}
+            className=" my-4 py-2 mx-auto text-xl px-5 md:text-center text-justify"
+          >
+            We strive day and night to break all the barriers and continuously
+            think of new innovative methods to shape the automobile industry.
+            Participating in competitions like SAE SUPRA helps us to work harder
+            and dream bigger. We are also planning to participate in the
+            international FSAE events in upcoming years. Our team is built with
+            pure intension of knowledge upgradation. Any kind of sponsorship
+            given will be utilized in fully efficient manner. More importantly
+            team tree have roots of non-profit basis. Your organisation can
+            become a part of our memorable journey, and you can share the pride
+            of supporting and molding a team representing the country on a
+            global scale in future. We would be highly obliged to have you as
+            our sponsor, and we humbly extend the hand of friendship and
+            companionship.
+          </motion.p>
         </div>
-
-        <h2 className="text-center text-2xl underline italic ">Our Sponsors</h2>
-        <section className={flexCom}>
+      </motion.section>
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 3 }}
+        className="text-lg min-h-screen flex flex-col items-center mb-36"
+      >
+        <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 uppercase text-center text-2xl text-red-500 mb-16">
+          Our Sponsors
+        </h2>
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 3 }}
+          className={flexCom}
+        >
           <div>
             <img
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               width="200px"
               src="https://cdn.shopify.com/s/files/1/0995/4538/t/10/assets/logo.png?v=128234076484141443081543449713"
             ></img>
           </div>
           <div>
             <img
-              className="w-20"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               src="https://www.dnmshock.com/themes/dnmshock/images/logo.png"
             ></img>
           </div>
           <div>
             <img
-              className="align-center mt-7"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               width="200px"
               src="https://www.solidworks.com/sites/default/files/2018-02/SWlogo33.svg"
             ></img>
           </div>
-        </section>
+        </motion.section>
 
-        <div className={flexCom}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 3 }}
+          className={flexCom}
+        >
           <div className={imgComp}>
             <svg
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               id="Ansys_logo"
               data-name="Ansys logo"
               xmlns="http://www.w3.org/2000/svg"
@@ -121,23 +174,28 @@ export const sponsors = (props) => {
           </div>
           <div>
             <img
-              width="200px"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               src="https://www.freemansgroup.com/wp-content/uploads/2023/03/Freemans-Logo-png-01.png"
             ></img>
           </div>
           <div>
             <img
-              width="200px"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               src="https://cdn.shopify.com/s/files/1/0995/4538/collections/full_bore_logo_flat_red_small_large.jpg?v=1654644715
               "
             ></img>
           </div>
-        </div>
+        </motion.div>
 
-        <div className={flexCom}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 3 }}
+          className={flexCom}
+        >
           <div>
             <img
-              width="200px"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               src="
               https://tse1.mm.bing.net/th?id=OIP.MtA2RqhA2lZYPxA_H-Ev1AHaFL&pid=Api&P=0
               
@@ -146,7 +204,7 @@ export const sponsors = (props) => {
           </div>
           <div>
             <img
-              width="200px"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               src=" https://www.bmcairfilters.com/sites/default/files/bmc-air-filters-logo-BE292C09A8-seeklogo.com__1_0.png
              "
             ></img>
@@ -154,16 +212,21 @@ export const sponsors = (props) => {
 
           <div>
             <img
-              width="200px"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               src="https://www.matrix-battery.com/wp-content/uploads/2022/06/matrix-logo.png"
             ></img>
           </div>
-        </div>
+        </motion.div>
 
-        <div className={flexCom}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 3 }}
+          className={flexCom}
+        >
           <div>
             <img
-              width="200px"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               src="https://resources.redbull.com/logos/redbullcom/v3/redbullcom-logo.svg
               
               "
@@ -171,67 +234,92 @@ export const sponsors = (props) => {
           </div>
           <div>
             <img
-              width="200px"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               src="https://lh3.googleusercontent.com/p/AF1QipN8tKs2lVxDVBXkRxq3r2OjKa--KlfmH8gGrE_n=w1080-h608-p-no-v0"
             ></img>
           </div>
 
           <div>
             <img
-              width="200px"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               src="https://tse4.mm.bing.net/th?id=OIP.Snz5OGZPETsngVBt6Wa35gHaDt&pid=Api&P=0"
             ></img>
           </div>
-        </div>
+        </motion.div>
 
-        <div className={flexCom}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 3 }}
+          className={flexCom}
+        >
           <div>
             <img
-              width="200px"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               src="https://global-uploads.webflow.com/62e8d2ea218fb7676b6892a6/62e8d2ea218fb73fa66895dd_88x37.webp"
             ></img>
           </div>
           <div>
             <img
-              width="200px"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
               src="https://tse4.mm.bing.net/th?id=OIP.inWtTaju5YHo1KEfH5dMHAHaB-&pid=Api&P=0"
             ></img>
           </div>
 
           <div>
-            <Image src="/tsc.jpeg" alt="me" width="200" height="64" />
+            <Image
+              src="/tsc.jpeg"
+              alt="me"
+              width="200"
+              className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
+              height="64"
+            />
           </div>
-        </div>
+        </motion.div>
 
-        <div className={flexCom}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 3 }}
+          className={flexCom}
+        >
           <img
-            width="200px"
+            className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
             src=" https://www.ebatterydirectory.com/pictures/profile-thumb/214/213530.jpg"
             alt=""
           />
           <img
-            width="200px"
-            src="https://masterlineworld.com/wp-content/uploads/2022/09/masterline-logo.png
-            
-           "
+            className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
+            src="https://masterlineworld.com/wp-content/uploads/2022/09/masterline-logo.png"
             alt=""
           />
-          <Image src="/hos.jpeg" alt="" width="200" height="64" />
-        </div>
+          <Image
+            src="/hos.jpeg"
+            alt=""
+            width="200"
+            className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
+            height="64"
+          />
+        </motion.div> 
 
-        <div className={flexCom}>
-
-          <img width="200px" src="https://kalotiindia.com/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-25-at-1.24.24-PM-300x129.jpeg" alt="" />
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 3 }}
+          className={flexCom}
+        >
           <img
-            width="200px"
+            className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
+            src="https://kalotiindia.com/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-25-at-1.24.24-PM-300x129.jpeg"
+            alt=""
+          />
+          <img
+            className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
             src=" https://media.licdn.com/dms/image/C560BAQGDVuxJH8DkYg/company-logo_200_200/0/1593429383963?e=2147483647&v=beta&t=zoxiORxcQqVwHpTi8N0bIhhU6EUDRykq5xch54PT21g"
             alt=""
           />
-
-          
-          
-        </div>
-      </>
+        </motion.div>
+      </motion.section>
     </Layout>
   );
 };
