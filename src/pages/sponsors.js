@@ -17,7 +17,7 @@ export const sponsors = (props) => {
         <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 uppercase text-center text-2xl text-red-500 mb-16">
           WHY SPONSOR US
         </h2>
-        <div className="text-gray-400 md:max-w-[60%]">
+        <div className="text-gray-400 md:max-w-[60%] px-5 text-md">
           <motion.p
             initial={{
               opacity: 0,
@@ -30,7 +30,7 @@ export const sponsors = (props) => {
               scale: 1,
             }}
             transition={{ duration: 1 }}
-            className=" my-4 py-2 mx-auto text-xl px-5 md:text-center text-justify"
+            className=" my-4 py-2 mx-auto md:text-xl px-5 md:text-center text-justify"
           >
             <strong className="font-extrabold text-gray-50 uppercase">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEAM SAHYADRI FORMULA RACERS
@@ -52,7 +52,7 @@ export const sponsors = (props) => {
               scale: 1,
             }}
             transition={{ duration: 1 }}
-            className=" my-4 py-2 mx-auto text-xl px-5 md:text-center text-justify"
+            className=" my-4 py-2 mx-auto md:text-xl px-5 md:text-center text-justify"
           >
             We strive day and night to break all the barriers and continuously
             think of new innovative methods to shape the automobile industry.
@@ -300,7 +300,7 @@ export const sponsors = (props) => {
             className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
             height="64"
           />
-        </motion.div> 
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
