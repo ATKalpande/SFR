@@ -26,7 +26,7 @@ export const ContactForm = () => {
         <label
           htmlFor="name"
           className="text-gray-500 block font-bold text-xl md:text-2xl mb-3"
-        >
+        > 
           Name
         </label>
         <input
