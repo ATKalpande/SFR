@@ -9,3 +9,4 @@ export { Layout } from "./Layout";
 export { Contact } from "./Contact";
 export { Hierarchy } from "./Hierarchy";
 export { GoogleMap } from "./GoogleMap";
+export { ContactForm } from "./ContactForm";

@@ -1,4 +1,4 @@
-import { GoogleMap, Layout } from "@/components";
+import { ContactForm, GoogleMap, Layout } from "@/components";
 import React from "react";
 import { motion } from "framer-motion";
 const Contact = () => {
@@ -83,75 +83,7 @@ const Contact = () => {
               transition={{ duration: 1 }}
               className="w-full px-10 md:mr-9 md:w-2/3"
             >
-              <form className="md:ml-4 md:mt-5">
-                <div className="my-4">
-                  <label
-                    htmlFor="name"
-                    className="text-gray-500 block font-bold text-2xl mb-3"
-                  >
-                    Name
-                  </label>
-                  <input
-                    className="w-full text-gray-200 font-bold bg-transparent border-b-2 border-gray-300 py-2 px-0 placeholder:text-gray-700 leading-tight focus:outline-none focus:border-gray-500"
-                    type="text"
-                    id="name"
-                    placeholder="Enter Your name"
-                    autoComplete="name"
-                  />
-                </div>
-                <div className="my-4">
-                  <label
-                    htmlFor="subject"
-                    className="text-gray-500 block font-bold text-2xl mb-3"
-                  >
-                    Subject
-                  </label>
-                  <input
-                    className="w-full text-gray-200 font-bold bg-transparent border-b-2 border-gray-300 py-2 px-0 placeholder:text-gray-700 leading-tight focus:outline-none focus:border-gray-500"
-                    type="text"
-                    id="subject"
-                    placeholder="Subject"
-                    autoComplete="off"
-                  />
-                </div>
-                <div className="my-4">
-                  <label
-                    htmlFor="email"
-                    className="text-gray-500 block font-bold text-2xl mb-3"
-                  >
-                    Email
-                  </label>
-                  <input
-                    className="w-full text-gray-200 font-bold bg-transparent border-b-2 border-gray-300 py-2 px-0 placeholder:text-gray-700 leading-tight focus:outline-none focus:border-gray-500"
-                    id="email"
-                    type="text"
-                    placeholder="ak@gmail.com"
-                    autoComplete="email"
-                  />
-                </div>
-                <div className="my-4">
-                  <label
-                    htmlFor="message"
-                    className="text-gray-500 block font-bold text-2xl mb-3"
-                  >
-                    Your Message
-                  </label>
-                  <textarea
-                    className="w-full text-gray-200 font-bold bg-transparent border-b-2 border-gray-300 py-2 px-0 placeholder:text-gray-700 leading-tight focus:outline-none focus:border-gray-500"
-                    id="message"
-                    name="message"
-                    placeholder="Enter your message."
-                  />
-                </div>
-                <div className="mt-8 md:text-start text-center">
-                  <button
-                    className="py-2 px-4 rounded bg-red-500 text-gray-50 animate-pulse hover:bg-red-700 focus:outline-none focus:bg-red-700"
-                    type="submit"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
+              <ContactForm />
             </motion.div>
           </div>
         </motion.section>
