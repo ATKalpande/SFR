@@ -14,7 +14,7 @@ export const sponsors = (props) => {
         transition={{ duration: 1.5 }}
         className="md:my-36 my-12 text-lg min-h-screen flex flex-col items-center"
       >
-        <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 uppercase text-center text-2xl text-red-500 mb-16">
+        <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 py-5 mb-20 uppercase text-center text-2xl text-red-500">
           WHY SPONSOR US
         </h2>
         <div className="text-gray-400 md:max-w-[60%] px-5 text-md">
@@ -76,7 +76,7 @@ export const sponsors = (props) => {
         transition={{ duration: 3 }}
         className="text-lg min-h-screen flex flex-col items-center mb-36"
       >
-        <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 uppercase text-center text-2xl text-red-500 mb-16">
+        <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 py-5 mb-20 uppercase text-center text-2xl text-red-500">
           Our Sponsors
         </h2>
         <motion.section

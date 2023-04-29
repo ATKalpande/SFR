@@ -21,7 +21,7 @@ export const gallery = () => {
   const hovimg = `md:hover:w-[85%] hover:w-[95%] hover:border-gray-50 hover:border-5 animation-all md:max-w-[650px] max-w-[400px]`;
   return (
     <Layout>
-      <h2 className="font-bold md:text-4xl sm:text-2xl py-16 uppercase text-center text-2xl text-red-500">
+      <h2 className="font-bold md:text-4xl sm:text-2xl pt-16 py-5 mb-20 uppercase text-center text-2xl text-red-500">
         Gallery
       </h2>
       <ImageRowCover>
