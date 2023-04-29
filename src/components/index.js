@@ -8,3 +8,4 @@ export { Suppo } from "./Suppo";
 export { Layout } from "./Layout";
 export { Contact } from "./Contact";
 export { Hierarchy } from "./Hierarchy";
+export { GoogleMap } from "./GoogleMap";
