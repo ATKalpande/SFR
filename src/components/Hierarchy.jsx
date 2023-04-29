@@ -1,84 +1,80 @@
-import React from 'react'
-
+import React from "react";
+import { motion } from "framer-motion";
 export const Hierarchy = () => {
+  function FrontOfCard() {
+    return (
+      <div className="absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 transition-all duration-100 delay-200 z-20 hover:opacity-0">
+        {" "}
+        MONETARY ASSISTANCE{" "}
+      </div>
+    );
+  }
 
-    function FrontOfCard() {
-        return (
-        
-                <div className="absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 transition-all duration-100 delay-200 z-20 hover:opacity-0">
-            {" "}
-             MONETARY ASSISTANCE{" "}
-          </div>
+  function BackOfCard() {
+    return (
+      <div className="absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 transition-all z-10 card-back">
+        {" "}
+        By providing funds to the team directly{" "}
+      </div>
+    );
+  }
 
-        );
-      }
+  function SecFrontOfCard() {
+    return (
+      <div className="absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 transition-all duration-100 delay-200 z-20 hover:opacity-0">
+        {" "}
+        PRODUCT SUPPORT{" "}
+      </div>
+    );
+  }
 
-      function BackOfCard() {
-        return (
-          <div className="absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 transition-all z-10 card-back">
-            {" "}
-           By providing funds to the team directly{" "}
-          </div>
-        );
-      }
+  function SecBackOfCard() {
+    return (
+      <div className="absolute inset-0 w-full h-full flex justify-center text-center items-center bg-gray-900 transition-all z-10 card-back">
+        {" "}
+        By providing componenets required for manufacturing of our vehicle{" "}
+      </div>
+    );
+  }
 
+  function ThirdFrontOfCard() {
+    return (
+      <div className="absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 transition-all duration-100 delay-200 z-20 hover:opacity-0">
+        {" "}
+        PROVIDING SERVICES{" "}
+      </div>
+    );
+  }
 
-      function SecFrontOfCard() {
-        return (
-        
-                <div className="absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 transition-all duration-100 delay-200 z-20 hover:opacity-0">
-            {" "}
-             PRODUCT SUPPORT{" "}
-          </div>
-
-        );
-      }
-
-      function SecBackOfCard() {
-        return (
-          <div className="absolute inset-0 w-full h-full flex justify-center text-center items-center bg-gray-900 transition-all z-10 card-back">
-            {" "}
-           By providing componenets required for manufacturing of our vehicle {" "}
-          </div>
-        );
-      }
-
-      function ThirdFrontOfCard() {
-        return (
-        
-                <div className="absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 transition-all duration-100 delay-200 z-20 hover:opacity-0">
-            {" "}
-            PROVIDING SERVICES{" "}
-          </div>
-
-        );
-      }
-
-      function ThirdBackOfCard() {
-        return (
-          <div className="absolute inset-0 w-full h-full flex justify-center text-center items-center bg-gray-900 transition-all z-10 card-back">
-            {" "}
-           By providing services like machining , logistics and accomodation as per requirement of team {" "}
-          </div>
-        );
-      }
-
+  function ThirdBackOfCard() {
+    return (
+      <div className="absolute inset-0 w-full h-full flex justify-center px-5 text-center items-center bg-gray-900 transition-all z-10 card-back">
+        {" "}
+        By providing services like machining , logistics and accomodation as per
+        requirement of team{" "}
+      </div>
+    );
+  }
 
   return (
-    <div>
-        <div className="relative w-96 h-60 rounded-2xl text-white overflow-hidden cursor-pointer transition-all duration-700 card">
-      <FrontOfCard />
-      <BackOfCard />
-    </div>
-    <div className="relative w-96 my-4 h-60 rounded-2xl text-white overflow-hidden cursor-pointer transition-all duration-700 card">
-      <SecFrontOfCard />
-      <SecBackOfCard />
-    </div>
-    <div className="relative w-96 my-4 h-60 rounded-2xl text-white overflow-hidden cursor-pointer transition-all duration-700 card">
-      <ThirdFrontOfCard />
-      <ThirdBackOfCard />
-    </div>
-    </div>
-  )
-}
-
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="flex flex-col md:flex-row justify-center items-center gap-5"
+    >
+      <div className="relative w-96 h-60 rounded-2xl text-white overflow-hidden cursor-pointer transition-all duration-500 card">
+        <FrontOfCard />
+        <BackOfCard />
+      </div>
+      <div className="relative w-96 my-4 h-60 rounded-2xl text-white overflow-hidden cursor-pointer transition-all duration-500 card">
+        <SecFrontOfCard />
+        <SecBackOfCard />
+      </div>
+      <div className="relative w-96 my-4 h-60 rounded-2xl text-white overflow-hidden cursor-pointer transition-all duration-500 card">
+        <ThirdFrontOfCard />
+        <ThirdBackOfCard />
+      </div>
+    </motion.section>
+  );
+};

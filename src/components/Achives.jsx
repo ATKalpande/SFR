@@ -36,7 +36,7 @@ export const Achives = () => {
       className="text-center my-10 min-h-screen flex flex-col items-center justify-start font-primary snap-center"
     >
       <div className="w-full flex flex-col items-center justify-center px-10">
-        <h2 className="font-bold md:text-4xl sm:text-2xl pt-10 uppercase my-5 py-5 font-Manrope text-red-500">
+        <h2 className="font-bold md:text-4xl text-2xl pt-10 uppercase my-5 py-5 font-Manrope text-red-500">
           Achivements
         </h2>
         {achivements.map((achievement) => {
