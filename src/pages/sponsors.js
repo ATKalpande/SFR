@@ -300,7 +300,7 @@ export const sponsors = (props) => {
             className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75"
             height="64"
           />
-        </motion.div>
+        </motion.div> 
 
         <motion.div
           initial={{ opacity: 0 }}
