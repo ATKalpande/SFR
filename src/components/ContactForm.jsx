@@ -25,7 +25,7 @@ export const ContactForm = () => {
       <div className="my-4">
         <label
           htmlFor="name"
-          className="text-gray-500 block font-bold text-2xl mb-3"
+          className="text-gray-500 block font-bold text-xl md:text-2xl mb-3"
         >
           Name
         </label>
@@ -42,7 +42,7 @@ export const ContactForm = () => {
       <div className="my-4">
         <label
           htmlFor="subject"
-          className="text-gray-500 block font-bold text-2xl mb-3"
+          className="text-gray-500 block font-bold text-xl md:text-2xl mb-3"
         >
           Subject
         </label>
@@ -59,7 +59,7 @@ export const ContactForm = () => {
       <div className="my-4">
         <label
           htmlFor="email"
-          className="text-gray-500 block font-bold text-2xl mb-3"
+          className="text-gray-500 block font-bold text-xl md:text-2xl mb-3"
         >
           Email
         </label>
@@ -76,7 +76,7 @@ export const ContactForm = () => {
       <div className="my-4">
         <label
           htmlFor="message"
-          className="text-gray-500 block font-bold text-2xl mb-3"
+          className="text-gray-500 block font-bold text-xl md:text-2xl mb-3"
         >
           Your Message
         </label>
