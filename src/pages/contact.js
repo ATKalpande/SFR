@@ -23,7 +23,8 @@ const Contact = () => {
           </p>
           <h3 className="text-bold mt-5 ">Contact Us</h3>
           <p>Email :  <a href="mailto: sahyadriformularacers@gmail.com"> sahyadriformularacers@gmail.com</a> </p>
-          <p>Phone No :  <a href="#"> +91 8329332765</a> </p>
+          <p>Phone No :  <a href="#"> +91 6206270409 </a> <span className="ml-2"></span> +91 8329332765</p>
+          
          
         </div>
         <div  className=" mr-9 w-2/3 ">

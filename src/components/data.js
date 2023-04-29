@@ -1,6 +1,7 @@
 const carouselImages = [
   {
     id: 1,
+    image: "sliderimg/7.jpeg",
     image: "./slider-images/1.jpeg",
     text: "WELL BEGAN IS HALF DONE",
   },

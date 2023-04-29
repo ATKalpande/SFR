@@ -68,7 +68,7 @@ export const Navbar = () => {
                 isScrolled ? "text-gray-200" : "text-gray-600"
               }`}
             >
-              My Website
+              Team SFR
             </Link>
           </motion.div>
           <div className="hidden md:block">
@@ -88,7 +88,7 @@ export const Navbar = () => {
             >
               <NavLink href="/">Home</NavLink>
               {/* <NavLink href="/about">About</NavLink> */}
-              <NavLink href="/crowd-funding">CrowdFunds</NavLink>
+              <NavLink href="/crowd-funding">Crowdfunding</NavLink>
               <NavLink href="/sponsors">sponsors</NavLink>
               <NavLink href="/gallery">Gallery</NavLink>
               <NavLink href="/contact">Contact</NavLink>
@@ -147,7 +147,7 @@ export const Navbar = () => {
               <NavLink href="/about">About</NavLink>
             </span> */}
             <span className="pt-2">
-              <NavLink href="/crowd-funding">CrowdFunds</NavLink>
+              <NavLink href="/crowd-funding">Crowdfunding</NavLink>
             </span>
 
             <span className="pt-2">

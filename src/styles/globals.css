@@ -16,6 +16,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
 p {
   line-height: 3ch !important;
 }
@@ -49,6 +50,7 @@ p {
 ::-webkit-scrollbar-corner {
   background: rgb(var(--background-end-rgb));
 }
+
 .cursor {
   width: 40px;
   height: 40px;
@@ -74,14 +76,23 @@ p {
   z-index: 9998;
   pointer-events: none;
 }
+
 html,
 body {
   color: rgb(var(--foreground-rgb));
   font-family: "Manrope", sans-serif !important;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+/* ============ flip hover styles ============ */
+.card:hover {
+  transition-delay: 2ms;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+.card-back {
+  transform: rotateY(180deg);
 }

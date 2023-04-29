@@ -10,7 +10,7 @@ export const Intro = () => {
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <h2 className=" font-bold md:text-4xl sm:text-2xl pt-5 md:hidden uppercase text-center text-red-500">
+      <h2 className=" font-bold md:text-4xl text-2xl pt-5 md:hidden uppercase text-center text-red-500">
         INTRODUCTION
       </h2>
       <section className="flex items-center justify-center flex-col-reverse xl:flex-row pt-6 md:mt-20 md:py-10  min-h-0 text-justify w-full">
@@ -21,7 +21,7 @@ export const Intro = () => {
             transition={{ duration: 1.2 }}
             className="px-5 flex flex-col justify-center cursor-default"
           >
-            <h2 className=" font-bold md:text-4xl sm:text-2xl py-3 my-3 mb-10 hidden md:block uppercase text-center text-red-500">
+            <h2 className=" font-bold md:text-4xl text-2xl py-3 my-3 mb-10 hidden md:block uppercase text-center text-red-500">
               INTRODUCTION
             </h2>
             <p className="text-gray-400 transition ease-in delay-100 hover:-translate-y-1 duration-300 md:text-2xl">
@@ -59,8 +59,8 @@ export const Intro = () => {
         </div>
 
         <motion.div
-          className="xl:w-1/2 h-full md:ps-1 md:p-5 md:m-5 w-full p-5"
-          initial={{ x: 300, opacity: 0 }}
+          className="xl:w-1/2   w-full "
+          initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2 }}
         >
