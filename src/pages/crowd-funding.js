@@ -11,7 +11,7 @@ export const CroudFunding = () => {
         transition={{ duration: 1.3 }}
         className="my-36 text-lg min-h-screen flex flex-col items-center"
       >
-        <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 uppercase text-center text-2xl text-red-500">
+        <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 py-5 mb-20 uppercase text-center text-2xl text-red-500">
           ABOUT US
         </h2>
 
@@ -71,12 +71,16 @@ export const CroudFunding = () => {
         className="my-12 text-lg min-h-screen flex flex-col"
       >
         <div className="md:w-full md:pr-8">
-          <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 uppercase text-center text-2xl text-red-500">
+          <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 py-5 mb-20 uppercase text-center text-2xl text-red-500">
             How Can You Support Us
+            <small
+              p
+              className="text-gray-600 my-4 py-2 text-center block text-sm"
+            >
+              Hover / Click to reveal our Hierarchy of support.
+            </small>
           </h2>
-          <p className="text-gray-600 my-4 py-2 text-center">
-            Hover / Click to reveal our Hierarchy of support.
-          </p>
+
           <Hierarchy />
         </div>
       </motion.section>
@@ -130,7 +134,7 @@ export const CroudFunding = () => {
         transition={{ duration: 1.5 }}
         className="text-lg min-h-screen flex flex-col"
       >
-        <h2 className="font-bold md:text-4xl sm:text-2xl py-5 uppercase text-2xl text-center text-red-500">
+        <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 py-5 mb-20 uppercase text-2xl text-center text-red-500">
           Funding Form
         </h2>
         <motion.div
