@@ -22,8 +22,9 @@ export const homePage = {
                 {
                   name: 'loadSingleItem',
                   type: 'boolean',
-                  title: 'Load a single item',
-                  description: 'If checked, only one image/video can be added to this section.',
+                  title: 'Display a single item',
+                  description:
+                    'If checked, only first image/video can be added to this section from the list.',
                   initialValue: false,
                 },
                 {
@@ -59,21 +60,29 @@ export const homePage = {
                       title: 'Video',
                       fields: [
                         {
+                          type: 'file',
+                          accept: 'video/*',
+                          title: 'Video',
+                          name: 'video',
+                          description: 'Upload a video file.',
+                        },
+                        {
                           name: 'url',
                           type: 'url',
                           title: 'URL',
+                          description: 'Optional: add a URL for the video.',
                         },
                         {
                           name: 'title',
                           type: 'string',
                           title: 'Title',
-                          description: 'Optional: add a title for the video',
+                          description: 'Optional: add a title for the video.',
                         },
                         {
                           name: 'description',
                           type: 'text',
                           title: 'Description',
-                          description: 'Optional: add a description for the video',
+                          description: 'Optional: add a description for the video.',
                         },
                       ],
                     },
