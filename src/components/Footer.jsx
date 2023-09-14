@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 const socials = [
@@ -34,7 +35,18 @@ export const Footer = () => {
       <p className="text-center text-gray-300 py-1">
         &copy; 2023 - All rights reserved
       </p>
-      <p className="text-gray-500 pb-1">Build with ❤️ By RD and AK</p>
+      <p className="text-gray-500 pb-1">
+        Build with ❤️ By{" "}
+        <Link
+          href="https://www.rdshinde.com/"
+          target="_blank"
+          title="Rishikesh Shinde"
+          className="hover:text-blue-500 hover:underline transition-all ease-in duration-300"
+        >
+          RD{" "}
+        </Link>
+        and AK
+      </p>
     </footer>
   );
 };
