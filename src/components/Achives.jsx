@@ -1,29 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// const achivements = [
-//   {
-//     id: 1,
-//     text: "Secured All India Rank 14 in business presentation.",
-//   },
-//   {
-//     id: 2,
-//     text: "Secured all India rank 19 in design presentation.",
-//   },
-//   {
-//     id: 3,
-//     text: "Secured all India rank 22 in all over event.",
-//   },
-//   {
-//     id: 4,
-//     text: "Collaboration with more than 20 companies for sponsorship in the first year of participation.",
-//   },
-//   {
-//     id: 5,
-//     text: "Got 3 international sponsors which is first time in the college.",
-//   },
-// ];
-
 export const Achives = ({ achievements }) => {
   const achievementStyle = `px-4 mb-4 w-full py-4 border text-gray-400 hover:text-gray-50 border-gray-500 rounded delay-75 transition ease-in duration-200 cursor-default md:text-xl text-lg`;
   return (

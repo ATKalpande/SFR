@@ -20,7 +20,7 @@ export const Intro = ({ heroText, sliderImages }) => {
       transition={{ duration: 1 }}
     >
       <h2 className=" font-bold md:text-4xl text-2xl pt-5 md:hidden uppercase text-center text-red-500">
-        INTRODUCTION
+      {heroText.title}
       </h2>
       <section className="flex items-center justify-center flex-col-reverse xl:flex-row pt-6 md:mt-20 md:py-10  min-h-0 text-justify w-full">
         <div className="xl:lef-sec  xl:w-1/2 md:ps-8 w-full p-5">

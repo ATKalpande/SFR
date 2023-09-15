@@ -31,6 +31,11 @@ export const homePage = {
 
   fields: [
     {
+      name: 'name',
+      title: 'Page Name',
+      type: 'string',
+    },
+    {
       name: 'heroComponent',
       title: 'Hero Component',
       type: 'object',

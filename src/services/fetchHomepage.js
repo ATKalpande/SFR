@@ -9,7 +9,6 @@ export const getHomepage = async () => {
           
     }`;
     const data = await sanityClient.fetch(query);
-    console.log("data", data);
 
     return data;
   } catch (err) {
