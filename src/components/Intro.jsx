@@ -5,7 +5,7 @@ import { Slider } from ".";
 import BlockContent from "@sanity/block-content-to-react";
 
 export const Intro = ({ heroText, sliderImages }) => {
-  console.log("Slider Images", sliderImages);
+ 
   const components = {
     types: {
       text: (props) => <p>{props.node.text}</p>,

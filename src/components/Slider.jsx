@@ -37,9 +37,6 @@ const breakPoints = [
 ];
 
 export const Slider = ({ images }) => {
-  console.log("images", images.length);
-  console.log(urlFor(images[0].image).url());
-
   return (
     <>
       <Carousel
@@ -61,8 +58,6 @@ export const Slider = ({ images }) => {
                   title={img.title}
                   className="aspect-[3/2] object-cover"
                 />
-
-                {/* <h3 className="text-bold text-center ">{d.text}</h3> */}
               </Link>
             </article>
           );
