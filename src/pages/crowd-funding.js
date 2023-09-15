@@ -2,17 +2,17 @@ import { Layout, Hierarchy } from "@/components";
 import BlockContent from "@sanity/block-content-to-react";
 import React from "react";
 import { motion } from "framer-motion";
-import { getFundingPage } from "@/services";
+import { getFundingPage, getSocials } from "@/services";
 import { urlFor } from "../../sanity";
 
-export const CroudFunding = ({ data }) => {
+export const CroudFunding = ({ data, socials }) => {
   const components = {
     types: {
       text: (props) => <span>{props.node.text}</span>,
     },
   };
   return (
-    <Layout>
+    <Layout socials={socials.socials}>
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -148,9 +148,11 @@ export const CroudFunding = ({ data }) => {
 
 export async function getStaticProps() {
   const data = await getFundingPage();
+  const socials = await getSocials();
   return {
     props: {
       data,
+      socials,
     },
   };
 }

@@ -3,10 +3,10 @@ import BlockContent from "@sanity/block-content-to-react";
 
 import React from "react";
 import { motion } from "framer-motion";
-import { getSponsorsPage } from "@/services";
+import { getSponsorsPage, getSocials } from "@/services";
 import { urlFor } from "../../sanity";
 
-export const sponsors = ({ data }) => {
+export const sponsors = ({ data, socials }) => {
   const components = {
     types: {
       text: (props) => <span>{props.node.text}</span>,
@@ -14,7 +14,7 @@ export const sponsors = ({ data }) => {
   };
 
   return (
-    <Layout>
+    <Layout socials={socials.socials}>
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -89,9 +89,11 @@ export default sponsors;
 
 export async function getStaticProps() {
   const data = await getSponsorsPage();
+  const socials = await getSocials();
   return {
     props: {
       data,
+      socials,
     },
     revalidate: 1,
   };

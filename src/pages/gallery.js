@@ -1,10 +1,10 @@
 import { Layout } from "@/components";
 import React from "react";
 import { motion } from "framer-motion";
-import { getGalleryPage } from "@/services";
+import { getGalleryPage, getSocials } from "@/services";
 import { urlFor } from "../../sanity";
 
-const ImageRowCover = ({ children }) => {
+const ImageRowCover = ({ children, socials }) => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -17,9 +17,9 @@ const ImageRowCover = ({ children }) => {
   );
 };
 
-export const gallery = ({ data }) => {
+export const gallery = ({ data, socials }) => {
   return (
-    <Layout>
+    <Layout socials={socials.socials}>
       <h2 className="font-bold md:text-4xl sm:text-2xl pt-16 py-5 mb-20 uppercase text-center text-2xl text-red-500">
         {data.gallaryComponent.title}
         <small p className="text-gray-600 my-4 py-2 text-center block text-sm">
@@ -58,9 +58,11 @@ export const gallery = ({ data }) => {
 
 export const getStaticProps = async () => {
   const data = await getGalleryPage();
+  const socials = await getSocials();
   return {
     props: {
       data,
+      socials,
     },
     revalidate: 1,
   };

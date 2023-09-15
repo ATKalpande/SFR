@@ -1,11 +1,11 @@
 import { ContactForm, GoogleMap, Layout } from "@/components";
 import React from "react";
-import { getContactPage } from "@/services";
+import { getContactPage, getSocials } from "@/services";
 import { motion } from "framer-motion";
 
-const Contact = ({ data }) => {
+const Contact = ({ data, socials }) => {
   return (
-    <Layout>
+    <Layout socials={socials.socials}>
       <>
         <motion.section
           initial={{ opacity: 0 }}
@@ -103,9 +103,11 @@ const Contact = ({ data }) => {
 
 export const getStaticProps = async () => {
   const data = await getContactPage();
+  const socials = await getSocials();
   return {
     props: {
       data,
+      socials,
     },
     revalidate: 1,
   };
