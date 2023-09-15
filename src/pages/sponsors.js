@@ -22,7 +22,9 @@ export const sponsors = ({ data, socials }) => {
           name="description"
           property="og:description"
           key="desc"
-          content="TEAM SAHYADRI FORMULA RACERS INDIA is a student run, non-profit racing team based in Govt. College Of Engineering & Research Avasari Pune. We are a team of Highly Exeburant and hardworking race car enthusiasts from various streams and we develop, design and manufacture a student formula style car to take part in FSAE Competition organized by SAE INDIA"
+          content="TEAM SAHYADRI FORMULA RACERS INDIA has been progressing since its establishment where students, year after year are determined to put their skills, talent, experience and expertise in the projects with very limited resources .
+
+          We strive day and night to break all the barriers and continuously think of new innovative methods to shape the automobile industry. Participating in competitions like SAE SUPRA helps us to work harder and dream bigger. We are also planning to participate in the international FSAE events in upcoming years. Our team is built with pure intension of knowledge upgradation. Any kind of sponsorship given will be utilized in fully efficient manner. More importantly team tree have roots of non-profit basis. Your organisation can become a part of our memorable journey, and you can share the pride of supporting and molding a team representing the country on a global scale in future. We would be highly obliged to have you as our sponsor, and we humbly extend the hand of friendship and companionship."
         />
         <meta
           property="og:image"
