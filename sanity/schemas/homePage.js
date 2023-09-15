@@ -2,6 +2,32 @@ export const homePage = {
   type: 'document',
   name: 'homepage',
   title: 'Homepage',
+  fieldset: [
+    {
+      name: 'heroComponent',
+      title: 'Hero Component',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+    },
+    {
+      name: 'imageSliderComponent',
+      title: 'Image Slider Component',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+    },
+    {
+      name: 'achievementsComponent',
+      title: 'Achievements Component',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+    },
+  ],
 
   fields: [
     {
@@ -68,7 +94,7 @@ export const homePage = {
           name: 'achievements',
           title: 'Achievements',
           type: 'array',
-          of: [{type: 'block'}],
+          of: [{type: 'string'}],
         },
       ],
     },

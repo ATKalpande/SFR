@@ -4,6 +4,8 @@ import carouselImages from "./data";
 import Carousel from "react-elastic-carousel";
 import Link from "next/link";
 
+import { urlFor, builder } from "../../sanity";
+
 const breakPoints = [
   {
     itemsToShow: 1,
@@ -34,7 +36,10 @@ const breakPoints = [
   },
 ];
 
-export const Slider = () => {
+export const Slider = ({ images }) => {
+  console.log("images", images.length);
+  console.log(urlFor(images[0].image).url());
+
   return (
     <>
       <Carousel
@@ -43,16 +48,20 @@ export const Slider = () => {
         autoPlaySpeed={1500}
         breakPoints={breakPoints}
       >
-        {carouselImages.map((d) => {
+        {images.map((img) => {
           return (
-            <article key={d.id} className="flex items-center justify-center">
+            <article
+              key={img._key}
+              className="flex items-center justify-center"
+            >
               <Link href="#" className="flex items-center justify-center">
                 <img
-                  src={d.image}
-                  alt={d.description}
+                  src={urlFor(img.image).url()}
+                  alt={img.altText}
+                  title={img.title}
                   className="aspect-[3/2] object-cover"
                 />
-                
+
                 {/* <h3 className="text-bold text-center ">{d.text}</h3> */}
               </Link>
             </article>

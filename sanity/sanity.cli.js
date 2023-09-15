@@ -5,4 +5,5 @@ export default defineCliConfig({
     projectId: 'bcfb3044',
     dataset: 'production',
   },
+  plugins: ['@sanity/base', '@sanity/default-layout', '@sanity/default-login', '@sanity/desk-tool'],
 })
