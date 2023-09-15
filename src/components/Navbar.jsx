@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,11 +65,22 @@ export const Navbar = () => {
           >
             <Link
               href="/"
-              className={`font-bold md:text-4xl text-2xl text-gray-600 ${
-                isScrolled ? "text-gray-200" : "text-gray-600"
+              className={`font-bold md:text-4xl text-2xl text-gray-600 gap-3 items-center justify-center flex-nowrap ${
+                isScrolled ? "text-gray-200" : "text-gray-600 flex"
               }`}
             >
-              Team SFR
+              {isScrolled ? (
+                ""
+              ) : (
+                <Image src="logo.svg" width={70} height={70} title="Team SFR" />
+              )}
+              <span
+                className={`hover:text-red-500 duration-500 delay-300 transition-all ease-in-out ${
+                  isScrolled ? "text-red-500" : ""
+                }`}
+              >
+                Team SFR
+              </span>
             </Link>
           </motion.div>
           <div className="hidden md:block">

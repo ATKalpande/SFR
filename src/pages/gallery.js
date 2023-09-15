@@ -1,8 +1,10 @@
 import { Layout } from "@/components";
 import React from "react";
 import { motion } from "framer-motion";
+import { getGalleryPage, getSocials } from "@/services";
+import { urlFor } from "../../sanity";
 
-const ImageRowCover = ({ children }) => {
+const ImageRowCover = ({ children, socials }) => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -15,413 +17,55 @@ const ImageRowCover = ({ children }) => {
   );
 };
 
-export const gallery = () => {
-  const galleryImg = `my-8 flex md:flex-row flex-col justify-center text-lg items-center gap-8 md:gap-5`;
-  const mrgin = `flex justify-center items-center`;
-  const hovimg = `md:hover:w-[85%] hover:w-[95%] hover:border-gray-50 hover:border-5 animation-all md:max-w-[650px] max-w-[400px]`;
+export const gallery = ({ data, socials }) => {
   return (
-    <Layout>
+    <Layout socials={socials.socials}>
       <h2 className="font-bold md:text-4xl sm:text-2xl pt-16 py-5 mb-20 uppercase text-center text-2xl text-red-500">
-        Gallery
+        {data.gallaryComponent.title}
+        <small p className="text-gray-600 my-4 py-2 text-center block text-sm">
+          {data.gallaryComponent.subTitle}
+        </small>
       </h2>
-      <ImageRowCover>
-        <section className={galleryImg}>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/1.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/2.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/27.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/4.jpeg"
-              alt=""
-            />
-          </div>
-        </section>
-      </ImageRowCover>
-      <ImageRowCover>
-        <div className={galleryImg}>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/5.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/6.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/7.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/43.jpeg"
-              alt=""
-            />
-          </div>
-        </div>
-      </ImageRowCover>
-      <ImageRowCover>
-        <div className={galleryImg}>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/9.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/10.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/11.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/12.jpeg"
-              alt=""
-            />
-          </div>
-        </div>
-      </ImageRowCover>
-      <ImageRowCover>
-        <div className={galleryImg}>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/13.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/14.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/15.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/16.jpeg"
-              alt=""
-            />
-          </div>
-        </div>
-      </ImageRowCover>
-      <ImageRowCover>
-        <div className={galleryImg}>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/17.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/18.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/19.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/20.jpeg"
-              alt=""
-            />
-          </div>
-        </div>
-      </ImageRowCover>
-      <ImageRowCover>
-        <div className={galleryImg}>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/21.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/22.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/23.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/24.jpeg"
-              alt=""
-            />
-          </div>
-        </div>
-      </ImageRowCover>
-      <ImageRowCover>
-        <div className={galleryImg}>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/25.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/26.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/3.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/28.jpeg"
-              alt=""
-            />
-          </div>
-        </div>
-      </ImageRowCover>
-      <ImageRowCover>
-        <div className={galleryImg}>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/29.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/30.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/31.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/32.jpeg"
-              alt=""
-            />
-          </div>
-        </div>
-      </ImageRowCover>
-      <ImageRowCover>
-        <div className={galleryImg}>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/33.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/34.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/35.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/36.jpeg"
-              alt=""
-            />
-          </div>
-        </div>
-      </ImageRowCover>
-      <ImageRowCover>
-        <div className={galleryImg}>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/37.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/38.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/39.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/40.jpeg"
-              alt=""
-            />
-          </div>
-        </div>
-      </ImageRowCover>
-      <ImageRowCover>
-        <div className={galleryImg}>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/41.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/42.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/44.jpeg"
-              alt=""
-            />
-          </div>
-          <div className={mrgin}>
-            <img
-              className={hovimg}
-              width={200}
-              src="galleryPhoto/8.jpeg"
-              alt=""
-            />
-          </div>
-        </div>
-      </ImageRowCover>
+
+      {data.gallaryImagesRows.map((row) => {
+        return (
+          <ImageRowCover key={row._id}>
+            <section
+              className={`my-8 flex md:flex-row flex-col justify-center text-lg items-center gap-8 md:gap-5`}
+            >
+              {row.imagesRow.map((img) => {
+                return (
+                  <div
+                    className={`flex justify-center items-center`}
+                    key={img._key}
+                  >
+                    <img
+                      className={`md:hover:w-[85%] hover:w-[95%] hover:border-gray-50 hover:border-5 animation-all md:max-w-[650px] max-w-[400px]`}
+                      width={200}
+                      src={urlFor(img).url()}
+                      alt={img.altText}
+                    />
+                  </div>
+                );
+              })}
+            </section>
+          </ImageRowCover>
+        );
+      })}
     </Layout>
   );
+};
+
+export const getStaticProps = async () => {
+  const data = await getGalleryPage();
+  const socials = await getSocials();
+  return {
+    props: {
+      data,
+      socials,
+    },
+    revalidate: 1,
+  };
 };
 
 export default gallery;

@@ -3,7 +3,7 @@ import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import Head from "next/head";
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, socials }) => {
   return (
     <>
       <Head>
@@ -16,7 +16,7 @@ export const Layout = ({ children }) => {
       </Head>
       <Navbar />
       <div className="overflow-hidden">{children}</div>
-      <Footer />
+      <Footer socials={socials} />
     </>
   );
 };
