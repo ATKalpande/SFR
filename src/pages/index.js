@@ -19,9 +19,9 @@ export default function Home({ data, socials }) {
         />
         <meta
           property="og:image"
-          content="https://cdn.sanity.io/images/bcfb3044/production/a5ea9580ede03a29ba1fb1b66fc06de5938ef605-1280x853.jpg"
+          content="https://cdn.sanity.io/images/bcfb3044/production/975a0ae1f5b0f86aaff9e4d1df681790196d9292-1280x720.jpg"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="logo.svg" height={80} />
       </Head>
       <main className="min-h-screen py-5 font-primary">
         <Layout socials={socials.socials}>
