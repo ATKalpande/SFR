@@ -5,7 +5,6 @@ import { Slider } from ".";
 import BlockContent from "@sanity/block-content-to-react";
 
 export const Intro = ({ heroText, sliderImages }) => {
- 
   const components = {
     types: {
       text: (props) => <p>{props.node.text}</p>,
@@ -20,7 +19,7 @@ export const Intro = ({ heroText, sliderImages }) => {
       transition={{ duration: 1 }}
     >
       <h2 className=" font-bold md:text-4xl text-2xl pt-5 md:hidden uppercase text-center text-red-500">
-      {heroText.title}
+        {heroText.title}
       </h2>
       <section className="flex items-center justify-center flex-col-reverse xl:flex-row pt-6 md:mt-20 md:py-10  min-h-0 text-justify w-full">
         <div className="xl:lef-sec  xl:w-1/2 md:ps-8 w-full p-5">
@@ -48,7 +47,7 @@ export const Intro = ({ heroText, sliderImages }) => {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2 }}
         >
-          <Slider images={...sliderImages} />
+          <Slider images={sliderImages} />
         </motion.div>
       </section>
     </motion.div>

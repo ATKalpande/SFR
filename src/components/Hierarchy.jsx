@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 export const Hierarchy = ({ supportLevels }) => {
-  console.log(supportLevels);
   function FrontOfCard({ title }) {
     return (
       <div className="absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 transition-all duration-100 delay-200 z-20 hover:opacity-0 font-bold md:text-2xl text-gray-400">

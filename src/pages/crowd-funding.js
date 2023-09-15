@@ -6,10 +6,9 @@ import { motion } from "framer-motion";
 import { getFundingPage } from "@/services";
 import { urlFor } from "../../sanity";
 export const CroudFunding = ({ data }) => {
-  console.log("data", data);
   const components = {
     types: {
-      text: (props) => <p>{props.node.text}</p>,
+      text: (props) => <span>{props.node.text}</span>,
     },
   };
   return (
@@ -64,7 +63,7 @@ export const CroudFunding = ({ data }) => {
             </small>
           </h2>
 
-          <Hierarchy supportLevels={...data.supportHierarchy.supportLevels}/>
+          <Hierarchy supportLevels={data.supportHierarchy.supportLevels} />
         </div>
       </motion.section>
       <motion.section
@@ -90,7 +89,9 @@ export const CroudFunding = ({ data }) => {
             }}
             transition={{ duration: 1.3 }}
             className="rounded-lg m-4 w-full md:w-auto md:aspect-[3/5] object-contain md:max-w-[30%]"
-            src={urlFor(data.budgetAnalysisComponent.budgetImages[0].image).url()}
+            src={urlFor(
+              data.budgetAnalysisComponent.budgetImages[0].image
+            ).url()}
             alt="budget"
           />
           <motion.img
@@ -106,7 +107,9 @@ export const CroudFunding = ({ data }) => {
             }}
             transition={{ duration: 1.3 }}
             className="rounded-lg w-full  md:w-auto md:aspect-[3/5] object-contain md:max-w-[50%]"
-            src={urlFor(data.budgetAnalysisComponent.budgetImages[1].image).url()}
+            src={urlFor(
+              data.budgetAnalysisComponent.budgetImages[1].image
+            ).url()}
             alt="pie chart"
           />
         </div>
@@ -118,7 +121,7 @@ export const CroudFunding = ({ data }) => {
         className="text-lg min-h-screen flex flex-col"
       >
         <h2 className="font-bold md:text-4xl sm:text-2xl pt-5 py-5 mb-20 uppercase text-2xl text-center text-red-500">
-         {data.fundingFormComponent.title}
+          {data.fundingFormComponent.title}
         </h2>
         <motion.div
           initial={{ opacity: 0, y: -50 }}

@@ -52,8 +52,8 @@ export const sponsorPage = {
       type: 'string',
     },
     {
-      name: 'sponsorsLogosComponents',
-      title: "Sponsor's Logos Component",
+      name: 'sponsorsLogosRow',
+      title: "Sponsor's Logos Row",
       type: 'array',
       of: [
         {
@@ -65,24 +65,41 @@ export const sponsorPage = {
               type: 'string',
             },
             {
-              name: 'sponsorLogoLink',
-              title: 'Sponsor Logo Link',
-              type: 'url',
-            },
-            {
-              name: 'sponsorLogo',
-              title: 'Sponsor Logo',
-              type: 'image',
-            },
-            {
-              name: 'sponsorLink',
-              title: 'Sponsor Link',
-              type: 'url',
-            },
-            {
-              name: 'altText',
-              title: 'Alt Text',
-              type: 'string',
+              name: 'imagesRow',
+              title: 'Sponsor Images Row',
+              type: 'array',
+              of: [
+                {
+                  type: 'image',
+                  fields: [
+                    {
+                      name: 'title',
+                      title: 'Title',
+                      type: 'string',
+                      options: {
+                        isHighlighted: true,
+                      },
+                    },
+                    {
+                      name: 'alt',
+                      title: 'Alt text',
+                      type: 'string',
+                    },
+                    {
+                      name: 'sponsorLogoLink',
+                      title: 'Sponsor Logo Link',
+                      description:
+                        'If image is not available please provide a link to the sponsor logo',
+                      type: 'url',
+                    },
+                    {
+                      name: 'sponsorWebsiteLink',
+                      title: 'Sponsor Website Link',
+                      type: 'url',
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },
