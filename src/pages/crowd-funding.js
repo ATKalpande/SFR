@@ -1,10 +1,10 @@
 import { Layout, Hierarchy } from "@/components";
 import BlockContent from "@sanity/block-content-to-react";
-
 import React from "react";
 import { motion } from "framer-motion";
 import { getFundingPage } from "@/services";
 import { urlFor } from "../../sanity";
+
 export const CroudFunding = ({ data }) => {
   const components = {
     types: {

@@ -2,11 +2,11 @@ import Head from "next/head";
 
 import { Inter } from "next/font/google";
 import { Intro, Achives, Layout } from "@/components";
-import { getHomepage } from "@/services";
+import { getHomepage, getSocials } from "@/services";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ data }) {
+export default function Home({ data, socials }) {
   return (
     <div>
       <Head>
@@ -21,7 +21,7 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen py-5 font-primary">
-        <Layout>
+        <Layout socials={socials.socials}>
           <Intro
             heroText={data.heroComponent}
             sliderImages={data.imageSliderComponent.images}
@@ -35,9 +35,12 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   const data = await getHomepage();
+  const socials = await getSocials();
   return {
     props: {
       data,
+      socials,
     },
+    revalidate: 1,
   };
 }

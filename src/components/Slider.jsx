@@ -1,10 +1,9 @@
 import React from "react";
-import carouselImages from "./data";
 
 import Carousel from "react-elastic-carousel";
 import Link from "next/link";
 
-import { urlFor, builder } from "../../sanity";
+import { urlFor } from "../../sanity";
 
 const breakPoints = [
   {
