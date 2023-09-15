@@ -1,8 +1,9 @@
 import { ContactForm, GoogleMap, Layout } from "@/components";
 import React from "react";
+import { getContactPage } from "@/services";
 import { motion } from "framer-motion";
-const Contact = () => {
-  const inputStyle = ` w-full pl-2 col-span-1 py-1 scroll-pb-0.5 mb-3 bg-gray-500 rounded-md`;
+
+const Contact = ({ data }) => {
   return (
     <Layout>
       <>
@@ -13,11 +14,11 @@ const Contact = () => {
           className="mt-20 p-10 md:p-0 md:mt-36 text-lg min-h-screen/2 flex flex-col items-center"
         >
           <h2 className="font-bold md:text-4xl sm:text-2xl py-5 mb-20 uppercase text-center text-2xl text-red-500">
-            Our Location
+            {data.locationComponent.title}
           </h2>
 
           <GoogleMap
-            location="Government College Of Engineering And Research Avasari Khurd, Pune, Pincode - 412405,Maharashtra, India"
+            location={data.locationComponent.locationAddress}
             zoom={10}
           />
         </motion.section>
@@ -50,23 +51,31 @@ const Contact = () => {
                 Address
               </h2>
               <p className="md:text-xl text-lg">
-                Government College Of Engineering And Research,
+                {data.contactUsComponent.collegeName}
                 <br />
-                <p>Avasari Khurd, Pune,</p>
-                <p>Pincode - 412405,</p>
-                <p>Maharashtra, India.</p>
+                <p>
+                  {data.contactUsComponent.villegeName}{" "}
+                  {data.contactUsComponent.districtName}
+                </p>
+                <p>Pincode - {data.contactUsComponent.pinCode}</p>
+                <p>
+                  {data.contactUsComponent.stateName}{" "}
+                  {data.contactUsComponent.countryName}.
+                </p>
               </p>
-              <h3 className="text-bold mt-5 ">Contact Us</h3>
+              <h3 className="text-bold mt-5 ">
+                {data.contactUsComponent.title}
+              </h3>
               <p>
                 Email :{" "}
                 <a href="mailto: sahyadriformularacers@gmail.com">
                   {" "}
-                  sahyadriformularacers@gmail.com
+                  {data.contactUsComponent.email}
                 </a>{" "}
               </p>
               <p>
-                Phone No : <a href="#"> +91 6206270409 </a>{" "}
-                <span className="ml-2"></span> +91 8329332765
+                Phone No :{" "}
+                <a href="#"> {data.contactUsComponent.phoneNumber} </a>{" "}
               </p>
             </motion.div>
             <motion.div
@@ -90,6 +99,15 @@ const Contact = () => {
       </>
     </Layout>
   );
+};
+
+export const getStaticProps = async () => {
+  const data = await getContactPage();
+  return {
+    props: {
+      data,
+    },
+  };
 };
 
 export default Contact;
