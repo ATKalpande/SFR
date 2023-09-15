@@ -20,7 +20,9 @@ export const CroudFunding = ({ data, socials }) => {
           name="description"
           property="og:description"
           key="desc"
-          content="TEAM SAHYADRI FORMULA RACERS INDIA is a student run, non-profit racing team based in Govt. College Of Engineering & Research Avasari Pune. We are a team of Highly Exeburant and hardworking race car enthusiasts from various streams and we develop, design and manufacture a student formula style car to take part in FSAE Competition organized by SAE INDIA"
+          content="TEAM SAHYADRI FORMULA RACERS INDIA is the official Formula SAE team of Govt. College of Engineering & Research Avasari, Pune. The team is formed by 40+ undergraduate engineering students from various departments whose vision is to achieve something pre-eminent at undergraduate level.
+
+          Being Motorsports enthusiasts and future engineers, the students take up the task of designing and manufacturing a student formula race-car and participate in the event SAE SUPRA organised by SAE INDIA . The event will be held on the only f1 track in India i.e. THE BUDDHA INTERNATIONAL CIRCUIT. Formula Student competitions get participation from a number of teams from around the country. Thus, this gives TEAM SAHYADRI FORMULA RACERS exposure to world-class engineering and helps develop the engineering practices of students that are going to be a vital part in the development of technology in India."
         />
         <meta
           property="og:image"
