@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 :root {
   --foreground-rgb: 255, 255, 255;
@@ -80,7 +79,7 @@ p {
 html,
 body {
   color: rgb(var(--foreground-rgb));
-  font-family: "Manrope", sans-serif !important;
+
   background: linear-gradient(
       to bottom,
       transparent,

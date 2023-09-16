@@ -1,19 +1,14 @@
 import "@/styles/globals.css";
-import { Manrope } from "@next/font/google";
-const manrope = Manrope({
-  subsets: ["cyrillic-ext"],
+import { Inter } from "@next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weights: ["400"],
 });
 export default function App({ Component, pageProps }) {
   return (
-    <>
-      <style jsx global>
-        {`
-          :root {
-            --manrope-font: ${manrope.style.fontFamily};
-          }
-        `}
-      </style>
+    <main className={inter.className}>
       <Component {...pageProps} />
-    </>
+    </main>
   );
 }

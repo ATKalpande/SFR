@@ -15,11 +15,6 @@ export const theme = {
       "gradient-conic":
         "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
     },
-    fontFamily: {
-      Manrope: ["Manrope", , ..._fontFamily.sans],
-      primary: ["var(--manrope-font)", "Manrope", ...fontFamily.sans],
-      serif: ["var(--manrope-font)", ...fontFamily.serif],
-    },
   },
 };
 export const plugins = [];
