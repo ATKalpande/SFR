@@ -17,7 +17,6 @@ const ImageRowCover = ({ children, socials }) => {
     </motion.section>
   );
 };
-
 export const gallery = ({ data, socials }) => {
   return (
     <div>

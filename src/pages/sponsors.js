@@ -13,7 +13,6 @@ export const sponsors = ({ data, socials }) => {
       text: (props) => <span>{props.node.text}</span>,
     },
   };
-
   return (
     <div>
       <Head>
@@ -90,7 +89,7 @@ export const sponsors = ({ data, socials }) => {
                           className="aspect-[3/5] object-contain max-h-[300px] md:mx-10 hover:scale-150 animation-all duration-150 delay-75 cursor-pointer"
                           width="200px"
                           src={img.sponsorLogoLink || urlFor(img).url()}
-                        ></img>
+                        />
                       </a>
                     </div>
                   );
