@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { getGalleryPage, getSocials } from "@/services";
 import { urlFor } from "../../sanity";
 
-const ImageRowCover = ({ children, socials }) => {
+const ImageRowCover = ({ children }) => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
